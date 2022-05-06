@@ -13,5 +13,9 @@ export default {
 </script>
 
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <div>
+      <h1>Resume Database</h1>
+    </div>
+  </div>
 </template>
