@@ -9,6 +9,8 @@
     <router-link to="/login">Log In</router-link>
     |
     <router-link to="/logout">Log Out</router-link>
+    |
+    <router-link to="/IndexResume">All data</router-link>
   </nav>
   <router-view />
 </template>

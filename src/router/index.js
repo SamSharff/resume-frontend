@@ -3,6 +3,7 @@ import HomeView from "../views/HomeView.vue";
 import SignUp from "../views/SignUp.vue";
 import LogIn from "../views/LogIn.vue";
 import LogOut from "../views/LogOut.vue";
+import IndexResume from "../views/IndexResume.vue";
 
 const routes = [
   {
@@ -32,6 +33,11 @@ const routes = [
     path: "/LogOut",
     name: "logout",
     component: LogOut,
+  },
+  {
+    path: "/IndexResume",
+    name: "index",
+    component: IndexResume,
   },
 ];
 
