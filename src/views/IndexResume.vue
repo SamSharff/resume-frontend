@@ -24,13 +24,13 @@ export default {
       <!-- <h3>Details</h3> -->
       <h1>{{ experience.category }}</h1>
       <h3>{{ experience.title }}</h3>
-      <h4>{{ experience.misc }}</h4>
+      <h4>Tags: {{ experience.misc }}</h4>
       <br />
       <!-- <button v-on:click="consoleLog(experience)">Console Log</button> -->
       <!-- <p>category: {{ experience.category }}</p> -->
       <!-- <a v-bind:href="`/experiences/${experience.id}`">More info</a> -->
       <!-- </div> -->
-      <!-- <button v-on:click="" -->
+      <button v-on:click="`/experiences/${experience.id}`">More info</button>
     </div>
   </div>
 </template>

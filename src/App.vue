@@ -11,6 +11,8 @@
     <router-link to="/logout">Log Out</router-link>
     |
     <router-link to="/IndexResume">All data</router-link>
+    |
+    <router-link to="/NewResume">Add new</router-link>
   </nav>
   <router-view />
 </template>

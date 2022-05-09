@@ -4,6 +4,7 @@ import SignUp from "../views/SignUp.vue";
 import LogIn from "../views/LogIn.vue";
 import LogOut from "../views/LogOut.vue";
 import IndexResume from "../views/IndexResume.vue";
+import NewResume from "../views/NewResume.vue";
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: "/IndexResume",
     name: "index",
     component: IndexResume,
+  },
+  {
+    path: "/NewResume",
+    name: "new",
+    component: NewResume,
   },
 ];
 
