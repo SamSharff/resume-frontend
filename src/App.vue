@@ -10,9 +10,9 @@
     |
     <router-link to="/logout">Log Out</router-link>
     |
-    <router-link to="/IndexResume">All data</router-link>
+    <router-link to="/Resumes">All data</router-link>
     |
-    <router-link to="/NewResume">Add new</router-link>
+    <router-link to="/resumes/new">Add new</router-link>
   </nav>
   <router-view />
 </template>

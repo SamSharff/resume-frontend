@@ -30,7 +30,7 @@ export default {
       <!-- <p>category: {{ experience.category }}</p> -->
       <!-- <a v-bind:href="`/experiences/${experience.id}`">More info</a> -->
       <!-- </div> -->
-      <button v-on:click="`/experiences/${experience.id}`">More info</button>
+      <a :href="`/experiences/${experience.id}`">More info</a>
     </div>
   </div>
 </template>
