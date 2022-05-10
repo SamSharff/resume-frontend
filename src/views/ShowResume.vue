@@ -22,6 +22,7 @@ export default {
     <p>{{ experience.description }}</p>
     <p>{{ experience.dates }}</p>
     <p>{{ experience.location }}</p>
+    <p>{{ experience.misc }}</p>
     <p>{{ experience.updated_at }}</p>
     <a href="/resumes">Back to all data</a>
     <br />

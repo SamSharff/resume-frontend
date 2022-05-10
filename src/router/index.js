@@ -9,6 +9,7 @@ import ShowResume from "../views/ShowResume.vue";
 import EditResume from "../views/EditResume.vue";
 import NewTraining from "../views/NewTraining.vue";
 import ShowTraining from "../views/ShowTraining.vue";
+import EditTraining from "../views/EditTraining.vue";
 
 const routes = [
   {
@@ -69,6 +70,11 @@ const routes = [
     path: "/trainings/:id",
     name: "trainings-show",
     component: ShowTraining,
+  },
+  {
+    path: "/trainings/:id/edit",
+    name: "trainings-edit",
+    component: EditTraining,
   },
 ];
 

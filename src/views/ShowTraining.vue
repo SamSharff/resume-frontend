@@ -23,6 +23,7 @@ export default {
     <p>{{ training.description }}</p>
     <p>{{ training.dates }}</p>
     <p>{{ training.location }}</p>
+    <p>{{ training.misc }}</p>
     <p>{{ training.updated_at }}</p>
     <a href="/resumes">Back to all data</a>
     <br />
