@@ -8,6 +8,7 @@ import NewResume from "../views/NewResume.vue";
 import ShowResume from "../views/ShowResume.vue";
 import EditResume from "../views/EditResume.vue";
 import NewTraining from "../views/NewTraining.vue";
+import ShowTraining from "../views/ShowTraining.vue";
 
 const routes = [
   {
@@ -63,6 +64,11 @@ const routes = [
     path: "/trainings/new",
     name: "trainings-new",
     component: NewTraining,
+  },
+  {
+    path: "/trainings/:id",
+    name: "trainings-show",
+    component: ShowTraining,
   },
 ];
 

@@ -37,7 +37,7 @@ export default {
       <h3>{{ training.title }}</h3>
       <h4>Tags: {{ training.misc }}</h4>
       <br />
-      <a v-bind:href="`/resumes/${training.id}`">More info</a>
+      <a v-bind:href="`/trainings/${training.id}`">More info</a>
     </div>
   </div>
 </template>
