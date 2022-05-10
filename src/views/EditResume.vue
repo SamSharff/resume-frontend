@@ -19,7 +19,7 @@ export default {
       console.log("update experience");
       axios.patch("/experiences/" + this.$route.params.id, this.experience).then((response) => {
         console.log("Experience update", response.data);
-        this.$router.push("/experiences/");
+        this.$router.push(`/resumes/${this.experience.id}`);
       });
     },
   },
@@ -62,6 +62,7 @@ export default {
       <input type="submit" value="Update" />
     </form>
     <a v-bind:href="`/resumes/${experience.id}`">Back</a>
+    <!-- <a href="/resumes/">Back</a> -->
   </div>
 </template>
 
