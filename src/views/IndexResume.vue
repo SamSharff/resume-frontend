@@ -12,6 +12,10 @@ export default {
       this.experiences = response.data;
       console.log("All experiences", this.experiences);
     });
+    axios.get("/trainings").then((response) => {
+      this.trainings = response.data;
+      console.log("All trainings", this.trainings);
+    });
   },
   methods: {},
 };
@@ -26,6 +30,13 @@ export default {
       <h4>Tags: {{ experience.misc }}</h4>
       <br />
       <a v-bind:href="`/resumes/${experience.id}`">More info</a>
+    </div>
+    <div v-for="training in trainings" v-bind:key="training.id">
+      <h1>{{ training.category }}</h1>
+      <h3>{{ training.title }}</h3>
+      <h4>Tags: {{ training.misc }}</h4>
+      <br />
+      <a v-bind:href="`/resumes/${training.id}`">More info</a>
     </div>
   </div>
 </template>
