@@ -12,7 +12,9 @@
     |
     <router-link to="/resumes">All data</router-link>
     |
-    <router-link to="/resumes/new">Add new</router-link>
+    <router-link to="/resumes/new">Add new experience</router-link>
+    |
+    <router-link to="/trainings/new">Add new training</router-link>
   </nav>
   <router-view />
 </template>

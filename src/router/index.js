@@ -7,6 +7,7 @@ import IndexResume from "../views/IndexResume.vue";
 import NewResume from "../views/NewResume.vue";
 import ShowResume from "../views/ShowResume.vue";
 import EditResume from "../views/EditResume.vue";
+import NewTraining from "../views/NewTraining.vue";
 
 const routes = [
   {
@@ -56,6 +57,12 @@ const routes = [
     path: "/resumes/:id/edit",
     name: "resumes-edit",
     component: EditResume,
+  },
+  //  ###TRAINING### //
+  {
+    path: "/trainings/new",
+    name: "trainings-new",
+    component: NewTraining,
   },
 ];
 

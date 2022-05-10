@@ -5,6 +5,7 @@ export default {
   data: function () {
     return {
       experience: {},
+      // training: {},
     };
   },
   created: function () {
@@ -12,18 +13,36 @@ export default {
       console.log("Showing experience", response.data);
       this.experience = response.data;
     });
+    // axios.get("/trainings/" + this.$route.params.id).then((response) => {
+    //   console.log("Showing training", response.data);
+    //   this.training = response.data;
+    // });
   },
 };
 </script>
 <template>
   <div class="experiences-show">
-    <h2>{{ experience.title }}</h2>
-    <p>{{ experience.description }}</p>
-    <p>{{ experience.dates }}</p>
-    <p>{{ experience.location }}</p>
-    <a href="/resumes">Back to all data</a>
-    <br />
-    <a v-bind:href="`/resumes/${experience.id}/edit`">Edit</a>
+      {{ experience }}
+      <h2>{{ experience.title }}</h2>
+      <p>{{ experience.description }}</p>
+      <p>{{ experience.dates }}</p>
+      <p>{{ experience.location }}</p>
+      <p>{{ experience.updated_at }}</p>
+      <a href="/resumes">Back to all data</a>
+      <br />
+      <a v-bind:href="`/resumes/${experience.id}/edit`">Edit</a>
+    <!-- <div class="trainings-show">
+      <!-- {{ training }} -->
+      <h2>{{ training.category }}</h2>
+      <p>{{ training.org_or_institution }}</p>
+      <p>{{ training.description }}</p>
+      <p>{{ training.dates }}</p>
+      <p>{{ training.location }}</p>
+      <p>{{ training.updated_at }}</p>
+      <a href="/resumes">Back to all data</a>
+      <br />
+      <a v-bind:href="`/resumes/${training.id}/edit`">Edit</a>
+    </div> -->
   </div>
 </template>
 

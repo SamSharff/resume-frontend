@@ -5,6 +5,7 @@ export default {
   data: function () {
     return {
       experiences: [],
+      trainings: [],
     };
   },
   created: function () {

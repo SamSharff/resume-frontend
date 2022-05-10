@@ -15,7 +15,7 @@ export default {
       axios
         .post("/experiences", this.newExperienceParams)
         .then((response) => {
-          console.log("Success", response.data);
+          console.log("Success!", response.data);
           this.experiences.push(response.data);
         })
         .catch((error) => {
@@ -31,12 +31,12 @@ export default {
       <h1>Add your professional history here!</h1>
       <div>
         <div class="form-group">
-          Category:
+          Category (Job, Skill, or Volunteer):
           <input type="text" v-model="newExperienceParams.category" />
         </div>
         <div class="form-group">
           Organization or Institution:
-          <input type="text" v-model="newExperienceParams.or_institution" />
+          <input type="text" v-model="newExperienceParams.org_or_institution" />
         </div>
         <div class="form-group">
           Description:
@@ -58,10 +58,13 @@ export default {
           Tags or Misc.:
           <input type="text" v-model="newExperienceParams.misc" />
         </div>
+        <div class="form-group">
+          Last Updated:
+          <input type="text" v-model="newExperienceParams.updated_at" />
+        </div>
       </div>
       <input type="submit" value="create" />
     </form>
-    <!-- <button v-on:click="createExperience(newExperienceParams)">Create Experience</button> -->
   </div>
 </template>
 
