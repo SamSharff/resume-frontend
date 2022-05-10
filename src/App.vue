@@ -1,8 +1,8 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link>
-    |
-    <router-link to="/about">About</router-link>
+    <!-- | -->
+    <!-- <router-link to="/about">About</router-link> -->
     |
     <router-link to="/signup">Sign Up</router-link>
     |
@@ -10,7 +10,7 @@
     |
     <router-link to="/logout">Log Out</router-link>
     |
-    <router-link to="/Resumes">All data</router-link>
+    <router-link to="/resumes">All data</router-link>
     |
     <router-link to="/resumes/new">Add new</router-link>
   </nav>

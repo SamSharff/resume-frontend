@@ -17,7 +17,13 @@ export default {
 </script>
 <template>
   <div class="experiences-show">
-    <p>{{ experience.title }}</p>
+    <h2>{{ experience.title }}</h2>
+    <p>{{ experience.description }}</p>
+    <p>{{ experience.dates }}</p>
+    <p>{{ experience.location }}</p>
+    <a href="/resumes">Back to all data</a>
+    <br />
+    <a v-bind:href="`/resumes/${experience.id}/edit`">Edit</a>
   </div>
 </template>
 

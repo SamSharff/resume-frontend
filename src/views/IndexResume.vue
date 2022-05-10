@@ -21,16 +21,11 @@ export default {
   <div class="index">
     <h1>Welcome to your resume database</h1>
     <div v-for="experience in experiences" v-bind:key="experience.id">
-      <!-- <h3>Details</h3> -->
       <h1>{{ experience.category }}</h1>
       <h3>{{ experience.title }}</h3>
       <h4>Tags: {{ experience.misc }}</h4>
       <br />
-      <!-- <button v-on:click="consoleLog(experience)">Console Log</button> -->
-      <!-- <p>category: {{ experience.category }}</p> -->
-      <!-- <a v-bind:href="`/experiences/${experience.id}`">More info</a> -->
-      <!-- </div> -->
-      <a :href="`/experiences/${experience.id}`">More info</a>
+      <a v-bind:href="`/resumes/${experience.id}`">More info</a>
     </div>
   </div>
 </template>

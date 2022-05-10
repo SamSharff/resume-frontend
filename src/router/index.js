@@ -6,6 +6,7 @@ import LogOut from "../views/LogOut.vue";
 import IndexResume from "../views/IndexResume.vue";
 import NewResume from "../views/NewResume.vue";
 import ShowResume from "../views/ShowResume.vue";
+import EditResume from "../views/EditResume.vue";
 
 const routes = [
   {
@@ -37,7 +38,7 @@ const routes = [
     component: LogOut,
   },
   {
-    path: "/Resumes",
+    path: "/resumes",
     name: "resume-index",
     component: IndexResume,
   },
@@ -50,6 +51,11 @@ const routes = [
     path: "/resumes/:id",
     name: "resumes-show",
     component: ShowResume,
+  },
+  {
+    path: "/resumes/:id/edit",
+    name: "resumes-edit",
+    component: EditResume,
   },
 ];
 
