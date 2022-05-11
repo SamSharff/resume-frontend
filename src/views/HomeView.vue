@@ -14,5 +14,8 @@ export default {
   <div class="home">
     <h1>Welcome to Resume Database!</h1>
     <h3>We keep track of your history, so you can concentrate on your future.</h3>
+    <div class="route-to-user-index-button">
+      <button @click="$router.push('/resumes/')">See all my data</button>
+    </div>
   </div>
 </template>

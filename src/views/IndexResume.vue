@@ -25,6 +25,16 @@ export default {
 <template>
   <div class="index">
     <h1>Welcome to your resume database</h1>
+    <div class="create-experience-button"></div>
+    <!-- EXPERIMENTING WITH BUTTON -->
+    <button @click="$router.push('/resumes/new')">Create New Experience</button>
+    <!-- EXPERIMENTING WITH BUTTON -->
+    <br />
+    ||
+    <div class="create-training-button"></div>
+    <!-- EXPERIMENTING WITH BUTTON -->
+    <button @click="$router.push('/trainings/new')">Create New Training</button>
+    <!-- EXPERIMENTING WITH BUTTON -->
     <div v-for="experience in experiences" v-bind:key="experience.id">
       <h1>{{ experience.category }}</h1>
       <h3>{{ experience.title }}</h3>
