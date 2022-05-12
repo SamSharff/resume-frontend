@@ -18,7 +18,15 @@ export default {
       console.log("All trainings", this.trainings);
     });
   },
-  methods: {},
+  methods: {
+    consoleLog: function () {
+      this.experiences.forEach((experience) => {
+        if (experience.checked) {
+          console.log("this is checked, hooray!", experience);
+        }
+      });
+    },
+  },
 };
 </script>
 
@@ -56,6 +64,16 @@ export default {
         <h4>Description: {{ experience.description }}</h4>
         <h4>Tags: {{ experience.misc }}</h4>
         <a v-bind:href="`/resumes/${experience.id}`">More info</a>
+        <div class="form-check">
+          <input
+            class="text-justify form-check-input"
+            v-model="experience.checked"
+            type="checkbox"
+            value=""
+            id="flexCheckDefault"
+          />
+          <label class="form-check-label" for="flexCheckDefault">Export</label>
+        </div>
         <br />
         <br />
         <br />
@@ -69,6 +87,7 @@ export default {
         <br />
         <br />
       </div>
+      <button v-on:click="consoleLog()">Console Log</button>
     </div>
   </div>
 </template>
