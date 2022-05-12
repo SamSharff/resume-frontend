@@ -25,29 +25,31 @@ export default {
 <template>
   <div class="index">
     <h1>Welcome to your resume database</h1>
-    <div class="create-experience-button"></div>
-    <!-- EXPERIMENTING WITH BUTTON -->
-    <button @click="$router.push('/resumes/new')">Create New Experience</button>
-    <!-- EXPERIMENTING WITH BUTTON -->
-    <br />
-    ||
-    <div class="create-training-button"></div>
-    <!-- EXPERIMENTING WITH BUTTON -->
-    <button @click="$router.push('/trainings/new')">Create New Training</button>
-    <!-- EXPERIMENTING WITH BUTTON -->
-    <div v-for="experience in experiences" v-bind:key="experience.id">
-      <h1>{{ experience.category }}</h1>
-      <h3>{{ experience.title }}</h3>
-      <h4>Tags: {{ experience.misc }}</h4>
+    <div>
+      <div class="create-experience-button"></div>
+      <!-- EXPERIMENTING WITH BUTTON -->
+      <button @click="$router.push('/resumes/new')">Create New Experience</button>
+      <!-- EXPERIMENTING WITH BUTTON -->
       <br />
-      <a v-bind:href="`/resumes/${experience.id}`">More info</a>
-    </div>
-    <div v-for="training in trainings" v-bind:key="training.id">
-      <h1>{{ training.category }}</h1>
-      <h3>{{ training.title }}</h3>
-      <h4>Tags: {{ training.misc }}</h4>
-      <br />
-      <a v-bind:href="`/trainings/${training.id}`">More info</a>
+      ||
+      <div class="create-training-button"></div>
+      <!-- EXPERIMENTING WITH BUTTON -->
+      <button @click="$router.push('/trainings/new')">Create New Training</button>
+      <!-- EXPERIMENTING WITH BUTTON -->
+      <div v-for="experience in experiences" v-bind:key="experience.id">
+        <h1>{{ experience.category }}</h1>
+        <h3>{{ experience.title }}</h3>
+        <h4>Tags: {{ experience.misc }}</h4>
+        <br />
+        <a v-bind:href="`/resumes/${experience.id}`">More info</a>
+      </div>
+      <div v-for="training in trainings" v-bind:key="training.id">
+        <h1>{{ training.category }}</h1>
+        <h3>{{ training.title }}</h3>
+        <h4>Tags: {{ training.misc }}</h4>
+        <br />
+        <a v-bind:href="`/trainings/${training.id}`">More info</a>
+      </div>
     </div>
   </div>
 </template>
