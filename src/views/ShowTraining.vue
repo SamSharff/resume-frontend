@@ -18,13 +18,31 @@ export default {
 <template>
   <div class="trainings-show">
     <!-- {{ training }} -->
-    <h2>{{ training.category }}</h2>
-    <p>{{ training.org_or_institution }}</p>
-    <p>{{ training.description }}</p>
-    <p>{{ training.dates }}</p>
-    <p>{{ training.location }}</p>
-    <p>{{ training.misc }}</p>
-    <p>{{ training.updated_at }}</p>
+    <h2>Category: {{ training.category }}</h2>
+    <p>
+      <strong>Organization:</strong>
+      {{ training.org_or_institution }}
+    </p>
+    <p>
+      <strong>Description:</strong>
+      {{ training.description }}
+    </p>
+    <p>
+      <strong>Dates:</strong>
+      {{ training.dates }}
+    </p>
+    <p>
+      <strong>Location:</strong>
+      {{ training.location }}
+    </p>
+    <p>
+      <strong>Misc.:</strong>
+      {{ training.misc }}
+    </p>
+    <p>
+      <strong>Last updated:</strong>
+      {{ training.updated_at }}
+    </p>
     <a href="/resumes">Back to all data</a>
     <br />
     <a v-bind:href="`/trainings/${training.id}/edit`">Edit</a>
