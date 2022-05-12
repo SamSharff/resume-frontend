@@ -24,6 +24,17 @@ export default {
 
 <template>
   <div class="index">
+    <!-- <label for="category">Search:</label>
+    <input list="category-options" id="category" name="category" />
+
+    <datalist id="category-options">
+      <option value="Job"></option>
+      <option value="Volunteer"></option>
+      <option value="Skill"></option>
+      <option value="Education"></option>
+      <option value="Professional Dev"></option>
+    </datalist> -->
+
     <h1>Welcome to your resume database</h1>
     <div>
       <div class="create-experience-button"></div>
@@ -33,6 +44,7 @@ export default {
 
       <br />
       ||
+
       <div class="create-training-button"></div>
       <!-- CREATE NEW TRAINING BUTTON -->
       <button @click="$router.push('/trainings/new')">Create New Training</button>
