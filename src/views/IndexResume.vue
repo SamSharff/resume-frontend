@@ -32,31 +32,25 @@ export default {
 
 <template>
   <div class="index">
-    <!-- <label for="category">Search:</label>
-    <input list="category-options" id="category" name="category" />
-
-    <datalist id="category-options">
-      <option value="Job"></option>
-      <option value="Volunteer"></option>
-      <option value="Skill"></option>
-      <option value="Education"></option>
-      <option value="Professional Dev"></option>
-    </datalist> -->
-
     <h1>Welcome to your resume database</h1>
     <div>
-      <div class="create-experience-button"></div>
       <!-- CREATE NEW EXPERIENCE BUTTON -->
+      <div class="create-experience-button"></div>
       <button @click="$router.push('/resumes/new')">Create New Experience</button>
       <!-- CREATE NEW EXPERIENCE BUTTON -->
 
       <br />
       ||
 
-      <div class="create-training-button"></div>
       <!-- CREATE NEW TRAINING BUTTON -->
+      <div class="create-training-button"></div>
       <button @click="$router.push('/trainings/new')">Create New Training</button>
       <!-- CREATE NEW TRAINING BUTTON -->
+      <br />
+      <br />
+      <br />
+
+      <!-- INDEX EXPERIENCES -->
 
       <div v-for="experience in experiences" v-bind:key="experience.id">
         <h1>{{ experience.category }}</h1>
@@ -64,6 +58,9 @@ export default {
         <h4>Description: {{ experience.description }}</h4>
         <h4>Tags: {{ experience.misc }}</h4>
         <a v-bind:href="`/resumes/${experience.id}`">More info</a>
+
+        <!-- CHECKBOXES EXPERIENCES -->
+
         <div class="form-check">
           <input
             class="text-justify form-check-input"
@@ -73,6 +70,7 @@ export default {
             id="flexCheckDefault"
           />
           <label class="form-check-label" for="flexCheckDefault">Export</label>
+          <!-- CHECKBOXES TRAININGS -->
         </div>
         <br />
         <br />
