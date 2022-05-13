@@ -112,7 +112,16 @@ export default {
           </thead>
           <tbody>
             <tr v-for="experience in experiences" :key="experience.id">
-              <td>{{ experience.id }}</td>
+              <td>
+                <input
+                  class="text-justify form-check-input"
+                  v-model="experience.checked"
+                  type="checkbox"
+                  value="Experience"
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">(butt)</label>
+              </td>
               <td>{{ experience.category }}</td>
               <td>{{ experience.title }}</td>
               <td>{{ experience.description }}</td>
@@ -140,7 +149,16 @@ export default {
           <tbody>
             <tr v-for="training in trainings" :key="training.id">
               <!-- <th scope="row">1</th> -->
-              <td>{{ training.id }}</td>
+              <td>
+                <input
+                  class="text-justify form-check-input"
+                  v-model="training.checked"
+                  type="checkbox"
+                  value="Training"
+                  id="flexCheckDefault"
+                />
+                <label class="form-check-label" for="flexCheckDefault">(butt)</label>
+              </td>
               <td>{{ training.category }}</td>
               <td>{{ training.org_or_institution }}</td>
               <td>{{ training.description }}</td>
