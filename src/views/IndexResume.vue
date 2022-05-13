@@ -65,16 +65,19 @@ export default {
         <h4>Description: {{ experience.description }}</h4>
         <h4>Tags: {{ experience.misc }}</h4>
         <a v-bind:href="`/resumes/${experience.id}`">More info</a>
-        <div class="form-check">
-          <input
-            class="text-justify form-check-input"
-            v-model="experience.checked"
-            type="checkbox"
-            value="Experience"
-            id="flexCheckDefault1"
-          />
-          <label class="form-check-label" for="flexCheckDefault">Export</label>
-        </div>
+        ||
+        <!-- <div class="form-check"> -->
+        <input
+          class="text-justify form-check-input"
+          v-model="experience.checked"
+          type="checkbox"
+          value="Experience"
+          id="flexCheckDefault"
+        />
+        <label class="form-check-label" for="flexCheckDefault">Export</label>
+        <!-- </div> -->
+        <br />
+        <br />
       </div>
 
       <!-- INDEX TRAININGS -->
@@ -93,6 +96,8 @@ export default {
           id="flexCheckDefault"
         />
         <label class="form-check-label" for="flexCheckDefault">Export</label>
+        <br />
+        <br />
       </div>
       <!-- CONSOLELOG BUTTON -->
       <button v-on:click="consoleLog()">Console Log</button>
