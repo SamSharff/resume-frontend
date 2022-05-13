@@ -99,8 +99,54 @@ export default {
         <br />
         <br />
       </div>
-      <!-- CONSOLELOG BUTTON -->
-      <button v-on:click="consoleLog()">Console Log</button>
+      <!-- BOOTSTRAP TABLE -->
+      <div class="container">
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Export</th>
+              <th scope="col">Category</th>
+              <th scope="col">Title</th>
+              <th scope="col">Description</th>
+              <th scope="col">Misc.</th>
+              <th scope="col">More info</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="experience in experiences" :key="experience.id">
+              <!-- <th scope="row">1</th> -->
+              <td>{{ experience.category }}</td>
+              <td>{{ experience.category }}</td>
+              <td>{{ experience.title }}</td>
+              <td>{{ experience.description }}</td>
+              <td>{{ experience.misc }}</td>
+              <td>
+                <a v-bind:href="`/resumes/${experience.id}`">More info</a>
+              </td>
+            </tr>
+            <tr v-for="training in trainings" :key="training.id">
+              <!-- <th scope="row">1</th> -->
+              <td>{{ training.category }}</td>
+              <td>{{ training.category }}</td>
+              <td>{{ training.title }}</td>
+              <td>{{ training.description }}</td>
+              <td>{{ training.misc }}</td>
+              <td>
+                <a v-bind:href="`/resumes/${training.id}`">More info</a>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <!-- <td colspan="2">Larry the Bird</td> -->
+              <td>Larry the Bird</td>
+              <td>Title</td>
+              <td>@twitter</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- CONSOLELOG BUTTON -->
+        <button v-on:click="consoleLog()">Console Log</button>
+      </div>
     </div>
   </div>
 </template>
