@@ -41,6 +41,7 @@ export default {
     <h1>Welcome to your resume database</h1>
     <div>
       <!-- CREATE NEW EXPERIENCE BUTTON -->
+      <br />
       <div class="create-experience-button"></div>
       <button @click="$router.push('/resumes/new')">Create New Experience</button>
       <!-- CREATE NEW EXPERIENCE BUTTON -->
@@ -52,38 +53,35 @@ export default {
       <div class="create-training-button"></div>
       <button @click="$router.push('/trainings/new')">Create New Training</button>
       <!-- CREATE NEW TRAINING BUTTON -->
-      <br />
-      <br />
-      <br />
 
       <!-- INDEX EXPERIENCES -->
       <!-- CHECKBOXES EXPERIENCES -->
 
-      <div v-for="experience in experiences" v-bind:key="experience.id">
+      <!-- <div v-for="experience in experiences" v-bind:key="experience.id">
         <h1>{{ experience.category }}</h1>
         <h3>Title: {{ experience.title }}</h3>
         <h4>Description: {{ experience.description }}</h4>
         <h4>Tags: {{ experience.misc }}</h4>
         <a v-bind:href="`/resumes/${experience.id}`">More info</a>
-        ||
-        <!-- <div class="form-check"> -->
-        <input
+        || -->
+
+      <!-- <input
           class="text-justify form-check-input"
           v-model="experience.checked"
           type="checkbox"
           value="Experience"
           id="flexCheckDefault"
         />
-        <label class="form-check-label" for="flexCheckDefault">Export</label>
-        <!-- </div> -->
-        <br />
-        <br />
-      </div>
+        <label class="form-check-label" for="flexCheckDefault">Export</label> -->
+
+      <br />
+      <br />
+      <!-- </div> -->
 
       <!-- INDEX TRAININGS -->
       <!-- CHECKBOXES TRAININGS -->
 
-      <div v-for="training in trainings" v-bind:key="training.id">
+      <!-- <div v-for="training in trainings" v-bind:key="training.id">
         <h1>{{ training.category }}</h1>
         <h4>Degree or Certification: {{ training.degree_or_cert }}</h4>
         <h4>Tags: {{ training.misc }}</h4>
@@ -98,8 +96,8 @@ export default {
         <label class="form-check-label" for="flexCheckDefault">Export</label>
         <br />
         <br />
-      </div>
-      <!-- BOOTSTRAP TABLE -->
+      </div> -->
+      <!-- EXPERIENCE TABLE -->
       <div class="container">
         <table class="table table-striped table-bordered table-hover">
           <thead>
@@ -114,8 +112,7 @@ export default {
           </thead>
           <tbody>
             <tr v-for="experience in experiences" :key="experience.id">
-              <!-- <th scope="row">1</th> -->
-              <td>{{ experience.category }}</td>
+              <td>{{ experience.id }}</td>
               <td>{{ experience.category }}</td>
               <td>{{ experience.title }}</td>
               <td>{{ experience.description }}</td>
@@ -124,23 +121,33 @@ export default {
                 <a v-bind:href="`/resumes/${experience.id}`">More info</a>
               </td>
             </tr>
+          </tbody>
+        </table>
+        <!-- TRAINING TABLE -->
+      </div>
+      <div class="container">
+        <table class="table table-striped table-bordered table-hover">
+          <thead>
+            <tr>
+              <th scope="col">Export</th>
+              <th scope="col">Category</th>
+              <th scope="col">Organization/Institution</th>
+              <th scope="col">Description</th>
+              <th scope="col">Misc.</th>
+              <th scope="col">More info</th>
+            </tr>
+          </thead>
+          <tbody>
             <tr v-for="training in trainings" :key="training.id">
               <!-- <th scope="row">1</th> -->
+              <td>{{ training.id }}</td>
               <td>{{ training.category }}</td>
-              <td>{{ training.category }}</td>
-              <td>{{ training.title }}</td>
+              <td>{{ training.org_or_institution }}</td>
               <td>{{ training.description }}</td>
               <td>{{ training.misc }}</td>
               <td>
-                <a v-bind:href="`/resumes/${training.id}`">More info</a>
+                <a v-bind:href="`/trainings/${training.id}`">More info</a>
               </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <!-- <td colspan="2">Larry the Bird</td> -->
-              <td>Larry the Bird</td>
-              <td>Title</td>
-              <td>@twitter</td>
             </tr>
           </tbody>
         </table>
