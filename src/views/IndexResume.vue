@@ -171,7 +171,7 @@ export default {
           </tbody>
         </table>
         <!-- CONSOLELOG BUTTON -->
-        <button v-on:click="consoleLog()">Console Log</button>
+        <button v-on:click="consoleLog()">Export</button>
       </div>
     </div>
   </div>

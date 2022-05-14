@@ -63,7 +63,9 @@ export default {
           <input type="text" v-model="newExperienceParams.updated_at" />
         </div>
       </div>
-      <input type="submit" value="create" />
+      <input type="submit" value="Create" />
+      <br />
+      <p><button @click="$router.push('/resumes')">Back to all Data</button></p>
     </form>
   </div>
 </template>
