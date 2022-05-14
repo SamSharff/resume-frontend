@@ -38,7 +38,6 @@ export default {
 
 <template>
   <div class="index">
-    <h1>Welcome to your resume database</h1>
     <div>
       <!-- CREATE NEW EXPERIENCE BUTTON -->
       <br />
@@ -98,6 +97,7 @@ export default {
         <br />
       </div> -->
       <!-- EXPERIENCE TABLE -->
+      <h3>Experience (Jobs, Skills, and Volunteer Work)</h3>
       <div class="container">
         <table class="table table-striped table-bordered table-hover">
           <thead>
@@ -134,6 +134,7 @@ export default {
         </table>
         <!-- TRAINING TABLE -->
       </div>
+      <h3>Training (Education, Professional Development, and Certifications)</h3>
       <div class="container">
         <table class="table table-striped table-bordered table-hover">
           <thead>
