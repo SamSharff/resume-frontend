@@ -99,77 +99,81 @@ export default {
       <!-- EXPERIENCE TABLE -->
       <h3>Experience (Jobs, Skills, and Volunteer Work)</h3>
       <div class="container">
-        <table class="table table-striped table-bordered table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Export</th>
-              <th scope="col">Category</th>
-              <th scope="col">Title</th>
-              <th scope="col">Description</th>
-              <th scope="col">Tags</th>
-              <th scope="col">More info</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="experience in experiences" :key="experience.id">
-              <td>
-                <input
-                  class="text-justify form-check-input"
-                  v-model="experience.checked"
-                  type="checkbox"
-                  value="Experience"
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault"></label>
-              </td>
-              <td>{{ experience.category }}</td>
-              <td>{{ experience.title }}</td>
-              <td>{{ experience.description }}</td>
-              <td>{{ experience.misc }}</td>
-              <td>
-                <a v-bind:href="`/resumes/${experience.id}`">More info</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive-xxl">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Export</th>
+                <th scope="col">Category</th>
+                <th scope="col">Title</th>
+                <th scope="col">Description</th>
+                <th scope="col">Tags</th>
+                <th scope="col">More info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="experience in experiences" :key="experience.id">
+                <td>
+                  <input
+                    class="text-justify form-check-input"
+                    v-model="experience.checked"
+                    type="checkbox"
+                    value="Experience"
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault"></label>
+                </td>
+                <td>{{ experience.category }}</td>
+                <td>{{ experience.title }}</td>
+                <td>{{ experience.description }}</td>
+                <td>{{ experience.misc }}</td>
+                <td>
+                  <a v-bind:href="`/resumes/${experience.id}`">More info</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <!-- TRAINING TABLE -->
       </div>
       <h3>Training (Education, Professional Development, and Certifications)</h3>
       <div class="container">
-        <table class="table table-striped table-bordered table-hover">
-          <thead>
-            <tr>
-              <th scope="col">Export</th>
-              <th scope="col">Category</th>
-              <th scope="col">Organization/Institution</th>
-              <th scope="col">Description</th>
-              <th scope="col">Tags.</th>
-              <th scope="col">More info</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr v-for="training in trainings" :key="training.id">
-              <!-- <th scope="row">1</th> -->
-              <td>
-                <input
-                  class="text-justify form-check-input"
-                  v-model="training.checked"
-                  type="checkbox"
-                  value="Training"
-                  id="flexCheckDefault"
-                />
-                <label class="form-check-label" for="flexCheckDefault"></label>
-              </td>
-              <td>{{ training.category }}</td>
-              <td>{{ training.org_or_institution }}</td>
-              <td>{{ training.description }}</td>
-              <td>{{ training.misc }}</td>
-              <td>
-                <a v-bind:href="`/trainings/${training.id}`">More info</a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-responsive-xxl">
+          <table class="table table-striped table-bordered table-hover">
+            <thead>
+              <tr>
+                <th scope="col">Export</th>
+                <th scope="col">Category</th>
+                <th scope="col">Organization/Institution</th>
+                <th scope="col">Description</th>
+                <th scope="col">Tags.</th>
+                <th scope="col">More info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="training in trainings" :key="training.id">
+                <!-- <th scope="row">1</th> -->
+                <td>
+                  <input
+                    class="text-justify form-check-input"
+                    v-model="training.checked"
+                    type="checkbox"
+                    value="Training"
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault"></label>
+                </td>
+                <td>{{ training.category }}</td>
+                <td>{{ training.org_or_institution }}</td>
+                <td>{{ training.description }}</td>
+                <td>{{ training.misc }}</td>
+                <td>
+                  <a v-bind:href="`/trainings/${training.id}`">More info</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <!-- CONSOLELOG BUTTON -->
         <button v-on:click="consoleLog()">Export</button>
       </div>
