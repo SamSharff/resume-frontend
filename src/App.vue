@@ -1,14 +1,44 @@
+<script>
+export default {
+  data: function () {
+    return {
+      isLoggedIn: !!localStorage.jwt,
+    };
+  },
+  watch: {
+    $route: function () {
+      this.isLoggedIn = !!localStorage.jwt;
+    },
+  },
+  methods: {
+    getUserId: function () {
+      return localStorage.getItem("user_id");
+    },
+  },
+};
+</script>
+
 <template>
   <nav>
-    <router-link to="/">Home</router-link>
-    |
-    <router-link to="/signup">Sign Up</router-link>
-    |
-    <router-link to="/login">Log In</router-link>
-    |
-    <router-link to="/logout">Log Out</router-link>
-    |
-    <router-link to="/resumes">All data</router-link>
+    <span>
+      <router-link to="/">Home</router-link>
+    </span>
+    <span v-if="!isLoggedIn">
+      |
+      <router-link to="/signup">Sign Up</router-link>
+    </span>
+    <span v-if="!isLoggedIn">
+      |
+      <router-link to="/login">Log In</router-link>
+    </span>
+    <span v-if="isLoggedIn">
+      |
+      <router-link to="/resumes">All data</router-link>
+    </span>
+    <span v-if="isLoggedIn">
+      |
+      <router-link to="/logout">Log Out</router-link>
+    </span>
   </nav>
   <router-view />
 </template>
