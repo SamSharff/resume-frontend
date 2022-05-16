@@ -17,8 +17,10 @@ export default {
 </script>
 <template>
   <div class="trainings-show">
-    <!-- {{ training }} -->
-    <h2>Category: {{ training.category }}</h2>
+    <p>
+      <strong>Category:</strong>
+      {{ training.category }}
+    </p>
     <p>
       <strong>Organization:</strong>
       {{ training.org_or_institution }}
@@ -36,12 +38,16 @@ export default {
       {{ training.location }}
     </p>
     <p>
-      <strong>Misc.:</strong>
+      <strong>Tags or notes:</strong>
       {{ training.misc }}
     </p>
     <p>
       <strong>Last updated:</strong>
       {{ training.updated_at }}
+    </p>
+    <p>
+      <strong>Entry created:</strong>
+      {{ training.created_at }}
     </p>
     <a href="/resumes">Back to all data</a>
     <br />

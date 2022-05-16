@@ -106,7 +106,7 @@ export default {
               <th scope="col">Category</th>
               <th scope="col">Title</th>
               <th scope="col">Description</th>
-              <th scope="col">Misc.</th>
+              <th scope="col">Tags</th>
               <th scope="col">More info</th>
             </tr>
           </thead>
@@ -120,7 +120,7 @@ export default {
                   value="Experience"
                   id="flexCheckDefault"
                 />
-                <label class="form-check-label" for="flexCheckDefault">(butt)</label>
+                <label class="form-check-label" for="flexCheckDefault"></label>
               </td>
               <td>{{ experience.category }}</td>
               <td>{{ experience.title }}</td>
@@ -143,7 +143,7 @@ export default {
               <th scope="col">Category</th>
               <th scope="col">Organization/Institution</th>
               <th scope="col">Description</th>
-              <th scope="col">Misc.</th>
+              <th scope="col">Tags.</th>
               <th scope="col">More info</th>
             </tr>
           </thead>
@@ -158,7 +158,7 @@ export default {
                   value="Training"
                   id="flexCheckDefault"
                 />
-                <label class="form-check-label" for="flexCheckDefault">(butt)</label>
+                <label class="form-check-label" for="flexCheckDefault"></label>
               </td>
               <td>{{ training.category }}</td>
               <td>{{ training.org_or_institution }}</td>

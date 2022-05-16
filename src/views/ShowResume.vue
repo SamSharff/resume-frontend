@@ -17,24 +17,42 @@ export default {
 </script>
 <template>
   <div class="experiences-show">
-    <h2>Category:</h2>
-    <p>{{ experience.category }}</p>
-    <h2>Organization:</h2>
-    <p>{{ experience.org_or_institution }}</p>
-    <h2>Description:</h2>
-    <p>{{ experience.description }}</p>
-    <h2>Title:</h2>
-    <p>{{ experience.title }}</p>
-    <h2>Dates:</h2>
-    <p>{{ experience.dates }}</p>
-    <h2>Location:</h2>
-    <p>{{ experience.location }}</p>
-    <h2>Misc.:</h2>
-    <p>{{ experience.misc }}</p>
-    <h2>Created</h2>
-    <p>{{ experience.created }}</p>
-    <h2>Last updated:</h2>
-    <h2>{{ experience.updated }}</h2>
+    <p>
+      <strong>Category:</strong>
+      {{ experience.category }}
+    </p>
+    <p>
+      <strong>Organization:</strong>
+      {{ experience.org_or_institution }}
+    </p>
+    <p>
+      <strong>Description:</strong>
+      {{ experience.description }}
+    </p>
+    <p>
+      <strong>Title:</strong>
+      {{ experience.title }}
+    </p>
+    <p>
+      <strong>Dates:</strong>
+      {{ experience.dates }}
+    </p>
+    <p>
+      <strong>Location:</strong>
+      {{ experience.location }}
+    </p>
+    <p>
+      <strong>Tags or notes:</strong>
+      {{ experience.misc }}
+    </p>
+    <p>
+      <strong>Last updated:</strong>
+      {{ experience.updated_at }}
+    </p>
+    <p>
+      <strong>Entry created:</strong>
+      {{ experience.created_at }}
+    </p>
     <a href="/resumes">Back to all data</a>
     <br />
     <a v-bind:href="`/resumes/${experience.id}/edit`">Edit</a>

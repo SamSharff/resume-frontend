@@ -55,7 +55,7 @@ export default {
           <input type="text" v-model="training.location" />
         </div>
         <div class="form-group">
-          Tags or Misc.:
+          Tags or notes:
           <input type="text" v-model="training.misc" />
         </div>
       </div>
