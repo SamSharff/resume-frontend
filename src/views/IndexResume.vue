@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+import FileSaver from "file-saver";
 
 export default {
   data: function () {
@@ -31,6 +32,10 @@ export default {
           console.log("this training is checked, hooray!", training);
         }
       });
+    },
+    onTestSaveFile() {
+      var blob = new Blob([this.experiences[0].description], { type: "text/plain;charset=utf-8" });
+      FileSaver.saveAs(blob, "hello world.txt");
     },
   },
 };
@@ -175,7 +180,7 @@ export default {
           </table>
         </div>
         <!-- CONSOLELOG BUTTON -->
-        <button v-on:click="consoleLog()">Export</button>
+        <button v-on:click="onTestSaveFile()">Export</button>
       </div>
     </div>
   </div>
