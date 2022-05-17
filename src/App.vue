@@ -19,6 +19,9 @@ export default {
 </script>
 
 <template>
+  <div class="company-name">
+    <h1><strong>RsDtbs</strong></h1>
+  </div>
   <nav>
     <span>
       <router-link to="/">Home</router-link>
@@ -33,7 +36,7 @@ export default {
     </span>
     <span v-if="isLoggedIn">
       |
-      <router-link to="/resumes">All data</router-link>
+      <router-link to="/resumes">All Data</router-link>
     </span>
     <span v-if="isLoggedIn">
       |

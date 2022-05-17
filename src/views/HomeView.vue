@@ -13,8 +13,9 @@ export default {
   <!-- Experiences Index -->
   <div class="home">
     <div class="container">
-      <h1>Welcome to Resume Database!</h1>
-      <h4>We track your history, so you can chart the future.</h4>
+      <h1><strong>Welcome to Resume Database!</strong></h1>
+      <br />
+      <h4>We hold your history. You create the future.</h4>
       <div class="route-to-user-index-button">
         <button type="button" class="btn btn-primary btn-lg btn-block btn-dark" @click="$router.push('/resumes/')">
           See my data

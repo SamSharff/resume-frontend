@@ -1,5 +1,6 @@
 <script>
 import axios from "axios";
+import moment from "moment";
 
 export default {
   data: function () {
@@ -12,6 +13,11 @@ export default {
       console.log("Showing experience", response.data);
       this.experience = response.data;
     });
+  },
+  methods: {
+    formatDate: function (date) {
+      return moment(date).add(10, "days").calendar();
+    },
   },
 };
 </script>
@@ -47,11 +53,11 @@ export default {
     </p>
     <p>
       <strong>Last updated:</strong>
-      {{ experience.updated_at }}
+      {{ formatDate(experience.updated_at) }}
     </p>
     <p>
       <strong>Entry created:</strong>
-      {{ experience.created_at }}
+      {{ formatDate(experience.created_at) }}
     </p>
     <a href="/resumes">Back to all data</a>
     <br />

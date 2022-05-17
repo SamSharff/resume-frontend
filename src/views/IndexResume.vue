@@ -33,18 +33,20 @@ export default {
         }
       });
     },
+
     onTestSaveFile() {
-      var output = "";
+      var output = [];
 
       this.experiences.forEach((experience) => {
         if (experience.checked) {
           console.log("this experience is checked, hooray!", experience);
-          output.concat("", experience);
+          console.log(output.concat("", experience));
         }
       });
       var blob = new Blob(
         [
           output,
+
           // [this.experiences[0].category],
           // [this.experiences[0].title],
           // [this.experiences[0].description],
@@ -161,7 +163,7 @@ export default {
           </table>
         </div>
         <!-- CONSOLELOG BUTTON -->
-        <button v-on:click="onTestSaveFile()">Export</button>
+        <button v-on:click="onTestSaveFile()">Export to file</button>
       </div>
     </div>
   </div>
