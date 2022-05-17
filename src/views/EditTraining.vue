@@ -19,7 +19,7 @@ export default {
       console.log("update training");
       axios.patch("/trainings/" + this.$route.params.id, this.training).then((response) => {
         console.log("Training update", response.data);
-        this.$router.push(`/resumes/${this.training.id}`);
+        this.$router.push(`/trainings/${this.training.id}`);
       });
     },
   },
