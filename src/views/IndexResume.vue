@@ -34,7 +34,28 @@ export default {
       });
     },
     onTestSaveFile() {
-      var blob = new Blob([this.experiences[0].description], { type: "text/plain;charset=utf-8" });
+      var output = "";
+
+      this.experiences.forEach((experience) => {
+        if (experience.checked) {
+          console.log("this experience is checked, hooray!", experience);
+          output.concat("", experience);
+        }
+      });
+      var blob = new Blob(
+        [
+          output,
+          // [this.experiences[0].category],
+          // [this.experiences[0].title],
+          // [this.experiences[0].description],
+          // [this.experiences[0].dates],
+          // [this.experiences[0].location],
+          // [this.experiences[0].misc],
+        ],
+        {
+          type: "text/plain;charset=utf-8",
+        }
+      );
       FileSaver.saveAs(blob, "hello world.txt");
     },
   },
@@ -58,49 +79,9 @@ export default {
       <button @click="$router.push('/trainings/new')">Create New Training</button>
       <!-- CREATE NEW TRAINING BUTTON -->
 
-      <!-- INDEX EXPERIENCES -->
-      <!-- CHECKBOXES EXPERIENCES -->
-
-      <!-- <div v-for="experience in experiences" v-bind:key="experience.id">
-        <h1>{{ experience.category }}</h1>
-        <h3>Title: {{ experience.title }}</h3>
-        <h4>Description: {{ experience.description }}</h4>
-        <h4>Tags: {{ experience.misc }}</h4>
-        <a v-bind:href="`/resumes/${experience.id}`">More info</a>
-        || -->
-
-      <!-- <input
-          class="text-justify form-check-input"
-          v-model="experience.checked"
-          type="checkbox"
-          value="Experience"
-          id="flexCheckDefault"
-        />
-        <label class="form-check-label" for="flexCheckDefault">Export</label> -->
-
       <br />
       <br />
-      <!-- </div> -->
 
-      <!-- INDEX TRAININGS -->
-      <!-- CHECKBOXES TRAININGS -->
-
-      <!-- <div v-for="training in trainings" v-bind:key="training.id">
-        <h1>{{ training.category }}</h1>
-        <h4>Degree or Certification: {{ training.degree_or_cert }}</h4>
-        <h4>Tags: {{ training.misc }}</h4>
-        <a v-bind:href="`/trainings/${training.id}`">More info</a>
-        <input
-          class="text-justify form-check-input"
-          v-model="training.checked"
-          type="checkbox"
-          value="Training"
-          id="flexCheckDefault"
-        />
-        <label class="form-check-label" for="flexCheckDefault">Export</label>
-        <br />
-        <br />
-      </div> -->
       <!-- EXPERIENCE TABLE -->
       <h3>Experience (Jobs, Skills, and Volunteer Work)</h3>
       <div class="container">
