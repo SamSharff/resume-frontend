@@ -35,29 +35,23 @@ export default {
     },
 
     onTestSaveFile() {
-      var output = [];
+      var output = "";
 
       this.experiences.forEach((experience) => {
         if (experience.checked) {
           console.log("this experience is checked, hooray!", experience);
-          console.log(output.concat("", experience));
+          output =
+            output +
+            experience.category +
+            experience.title +
+            experience.description +
+            experience.location +
+            experience.misc;
         }
       });
-      var blob = new Blob(
-        [
-          output,
-
-          // [this.experiences[0].category],
-          // [this.experiences[0].title],
-          // [this.experiences[0].description],
-          // [this.experiences[0].dates],
-          // [this.experiences[0].location],
-          // [this.experiences[0].misc],
-        ],
-        {
-          type: "text/plain;charset=utf-8",
-        }
-      );
+      var blob = new Blob([output], {
+        type: "text/plain;charset=utf-8",
+      });
       FileSaver.saveAs(blob, "hello world.txt");
     },
   },
