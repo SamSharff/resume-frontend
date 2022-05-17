@@ -14,21 +14,17 @@ export default {
   <div class="home">
     <div class="container">
       <h1>Welcome to Resume Database!</h1>
-      <h4>We keep track of your history, so you can concentrate on your future.</h4>
+      <h4>We track your history, so you can chart the future.</h4>
       <div class="route-to-user-index-button">
-        <button @click="$router.push('/resumes/')">See my data</button>
+        <button type="button" class="btn btn-primary btn-lg btn-block btn-dark" @click="$router.push('/resumes/')">
+          See my data
+        </button>
       </div>
     </div>
   </div>
 </template>
 
 <style>
-/* .home {
-  text-align: center;
-  border: 3px solid;
-  padding: 50px;
-  border-color: #2c3e50;
-} */
 .home {
   text-align: center;
   width: 300px;
