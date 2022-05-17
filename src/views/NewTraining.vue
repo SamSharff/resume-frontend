@@ -16,8 +16,7 @@ export default {
         .post("/trainings", this.newTrainingParams)
         .then((response) => {
           console.log("Success", response.data);
-          this.trainings.push(response.data);
-          this.$router.push(`/trainings/${this.training.id}`);
+          this.$router.push(`/resumes/`);
         })
         .catch((error) => {
           console.log(error.response.status, error.response.statusText), (this.status = error.response.status);
@@ -33,7 +32,7 @@ export default {
 
       <div>
         <div class="form-group">
-          Category (Education or Professional Dev):
+          Category (Education, Professional Dev, or Certification):
           <input type="text" v-model="newTrainingParams.category" />
         </div>
 
@@ -66,17 +65,12 @@ export default {
           Tags or Misc.:
           <input type="text" v-model="newTrainingParams.misc" />
         </div>
-
-        <div class="form-group">
-          Last Updated:
-          <input type="text" v-model="newTrainingParams.updated_at" />
-        </div>
       </div>
 
       <input type="submit" value="Create" />
-      <br />
-      <p><button @click="$router.push('/resumes')">Back to all Data</button></p>
+      <!-- <br /> -->
     </form>
+    <p><button @click="$router.push('/resumes')">Back to all Data</button></p>
   </div>
 </template>
 

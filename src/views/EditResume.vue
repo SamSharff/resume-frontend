@@ -31,7 +31,7 @@ export default {
       <h1>Edit</h1>
       <div>
         <div class="form-group">
-          Category:
+          Category (Job, Skill, or Volunteer):
           <input type="text" v-model="experience.category" />
         </div>
         <div class="form-group">
@@ -62,7 +62,6 @@ export default {
       <input type="submit" value="Update" />
     </form>
     <a v-bind:href="`/resumes/${experience.id}`">Back</a>
-    <!-- <a href="/resumes/">Back</a> -->
   </div>
 </template>
 

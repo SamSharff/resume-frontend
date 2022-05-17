@@ -16,7 +16,7 @@ export default {
         .post("/experiences", this.newExperienceParams)
         .then((response) => {
           console.log("Success!", response.data);
-          this.experiences.push(response.data);
+          this.$router.push(`/resumes/`);
         })
         .catch((error) => {
           console.log(error.response.status, error.response.statusText), (this.status = error.response.status);
@@ -57,10 +57,6 @@ export default {
         <div class="form-group">
           Tags or Misc.:
           <input type="text" v-model="newExperienceParams.misc" />
-        </div>
-        <div class="form-group">
-          Last Updated:
-          <input type="text" v-model="newExperienceParams.updated_at" />
         </div>
       </div>
       <input type="submit" value="Create" />

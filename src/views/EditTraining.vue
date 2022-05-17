@@ -31,7 +31,7 @@ export default {
       <h1>Edit</h1>
       <div>
         <div class="form-group">
-          Category:
+          Category (Education, Professional Dev, or Certification):
           <input type="text" v-model="training.category" />
         </div>
         <div class="form-group">
@@ -43,12 +43,12 @@ export default {
           <input type="text" v-model="training.description" />
         </div>
         <div class="form-group">
-          Title:
-          <input type="text" v-model="training.title" />
-        </div>
-        <div class="form-group">
           Dates:
           <input type="text" v-model="training.dates" />
+        </div>
+        <div class="form-group">
+          Degree or Certificate:
+          <input type="text" v-model="training.degree_or_cert" />
         </div>
         <div class="form-group">
           Location:
