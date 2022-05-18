@@ -20,7 +20,7 @@ export default {
 
 <template>
   <div class="company-name">
-    <h1><strong>RsDtbs</strong></h1>
+    <h1><strong>RsmDtbs</strong></h1>
   </div>
   <nav>
     <span>

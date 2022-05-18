@@ -28,7 +28,7 @@ export default {
       {{ training.category }}
     </p>
     <p>
-      <strong>Organization:</strong>
+      <strong>Organization or Institution:</strong>
       {{ training.org_or_institution }}
     </p>
     <p>
@@ -38,6 +38,10 @@ export default {
     <p>
       <strong>Dates:</strong>
       {{ training.dates }}
+    </p>
+    <p>
+      <strong>Degree or Certificate:</strong>
+      {{ training.degree_or_cert }}
     </p>
     <p>
       <strong>Location:</strong>
