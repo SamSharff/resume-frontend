@@ -35,42 +35,66 @@ export default {
     },
 
     onTestSaveFile() {
-      var output = "Category" + "," + "Title" + "," + "Description" + "," + "Location" + "," + "Tags" + "\n";
+      var output =
+        " - - - - - - " +
+        "CATEGORY" +
+        " || " +
+        "TITLE" +
+        " || " +
+        "DESCRIPTION" +
+        " || " +
+        "LOCATION" +
+        " || " +
+        "TAGS" +
+        " - - - - - - " +
+        "\n";
 
       this.experiences.forEach((experience) => {
         if (experience.checked) {
           console.log("this experience is checked, hooray!", experience);
           output =
             output +
+            "-----" +
             experience.category +
-            "," +
+            " | " +
             experience.title +
-            "," +
+            " | " +
             experience.description +
-            "," +
+            " | " +
             experience.location +
-            "," +
+            " | " +
             experience.misc +
             "\n";
         }
       });
-      ("\n");
       var outputTwo =
-        "Category" + "," + "Org/Institution" + "," + "Description" + "," + "Location" + "," + "Tags" + "\n";
+        " - - - - - - " +
+        "CATEGORY" +
+        " || " +
+        "ORG/INSTITUTION" +
+        " || " +
+        "DESCRIPTION" +
+        " || " +
+        "LOCATION" +
+        " || " +
+        "TAGS" +
+        " - - - - - - " +
+        "\n";
 
       this.trainings.forEach((training) => {
         if (training.checked) {
           console.log("this training is checked, hooray!", training);
           outputTwo =
             outputTwo +
+            "-----" +
             training.category +
-            "," +
+            " | " +
             training.org_or_institution +
-            "," +
+            " | " +
             training.description +
-            "," +
+            " | " +
             training.location +
-            "," +
+            " | " +
             training.misc +
             "\n";
         }
