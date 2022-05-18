@@ -62,7 +62,7 @@ export default {
         </div>
 
         <div class="form-group">
-          Tags or Misc.:
+          Tags or notes:
           <input type="text" v-model="newTrainingParams.misc" />
         </div>
       </div>

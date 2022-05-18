@@ -55,7 +55,7 @@ export default {
           <input type="text" v-model="newExperienceParams.location" />
         </div>
         <div class="form-group">
-          Tags or Misc.:
+          Tags or notes:
           <input type="text" v-model="newExperienceParams.misc" />
         </div>
       </div>

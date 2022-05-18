@@ -24,7 +24,7 @@ export default {
 <template>
   <div class="trainings-show">
     <p>
-      <strong>Category (Education, Professional Dev, or Certification):</strong>
+      <strong>Category:</strong>
       {{ training.category }}
     </p>
     <p>

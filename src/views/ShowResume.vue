@@ -28,7 +28,7 @@ export default {
       {{ experience.category }}
     </p>
     <p>
-      <strong>Organization:</strong>
+      <strong>Organization or Institution:</strong>
       {{ experience.org_or_institution }}
     </p>
     <p>
