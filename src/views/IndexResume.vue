@@ -35,7 +35,7 @@ export default {
     },
 
     onTestSaveFile() {
-      var output = "";
+      var output = "Category" + "," + "Title" + "," + "Description" + "," + "Location" + "," + "Tags" + "\n";
 
       this.experiences.forEach((experience) => {
         if (experience.checked) {
@@ -43,16 +43,21 @@ export default {
           output =
             output +
             experience.category +
+            "," +
             experience.title +
+            "," +
             experience.description +
+            "," +
             experience.location +
-            experience.misc;
+            "," +
+            experience.misc +
+            "\n";
         }
       });
       var blob = new Blob([output], {
         type: "text/plain;charset=utf-8",
       });
-      FileSaver.saveAs(blob, "hello world.txt");
+      FileSaver.saveAs(blob, "hello world.csv");
     },
   },
 };
