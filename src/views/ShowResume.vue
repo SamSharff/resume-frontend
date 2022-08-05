@@ -18,6 +18,12 @@ export default {
     formatDate: function (date) {
       return moment(date).add(10, "days").calendar();
     },
+    destroyExperience: function () {
+      axios.delete("/experiences/" + this.$route.params.id).then((response) => {
+        console.log("Deleting experience!", response.data);
+        this.$router.push("/resumes/");
+      });
+    },
   },
 };
 </script>
@@ -62,6 +68,8 @@ export default {
     <a href="/resumes">Back to all data</a>
     <br />
     <a v-bind:href="`/resumes/${experience.id}/edit`">Edit</a>
+    <br />
+    <button v-on:click="destroyExperience()">DELETE</button>
   </div>
 </template>
 

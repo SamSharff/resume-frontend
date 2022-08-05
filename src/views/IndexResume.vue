@@ -179,7 +179,7 @@ export default {
                 <th scope="col">Category</th>
                 <th scope="col">Organization/Institution</th>
                 <th scope="col">Description</th>
-                <th scope="col">Tags.</th>
+                <th scope="col">Tags</th>
                 <th scope="col">More info</th>
               </tr>
             </thead>
